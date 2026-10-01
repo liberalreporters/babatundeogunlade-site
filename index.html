@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Babatunde Sunday Ogunlade | Official Campaign Portal 2027</title>
+​<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+​<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+​<!-- Tailwind CSS Configuration -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+apc: {
+dark: '#052e1f',    // Deep institutional green
+main: '#0a432e',    // Primary green
+light: '#e8f2ed',   // Light background tint
+accent: '#106b4a',  // Brighter green for accents
+gold: '#c29b40'     // Gold accent from poster
+}
+},
+fontFamily: {
+sans: ['Inter', 'sans-serif'],
+serif: ['Lora', 'serif'],
+}
+}
+}
+}
+</script>
+​<!-- Custom CSS Styles -->
+<style>
+body {
+background-color: #ffffff;
+color: #1a1a1a;
+-webkit-font-smoothing: antialiased;
+}
+​/* Stats Grid Borders */
+.stat-grid-lines { border-bottom: 1px solid #e5e7eb; }
+@media (min-width: 768px) {
+.stat-border-r { border-right: 1px solid #e5e7eb; }
+.stat-border-b { border-bottom: 1px solid #e5e7eb; }
+}
+​/* Mobile Menu Transitions */
+#mobile-menu {
+transition: opacity 0.3s ease, visibility 0.3s ease;
+opacity: 0;
+visibility: hidden;
+}
+#mobile-menu.open {
+opacity: 1;
+visibility: visible;
+}
+​.menu-inner {
+transform: translateY(-20px);
+transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#mobile-menu.open .menu-inner {
+transform: translateY(0);
+}
+​/* Card Interactions */
+.agenda-card {
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.agenda-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.08);
+}
+​/* Typography Utilities */
+.serif-heading {
+font-family: 'Lora', serif;
+letter-spacing: -0.02em;
+}
+​.eyebrow {
+font-size: 0.7rem;
+text-transform: uppercase;
+letter-spacing: 0.15em;
+font-weight: 700;
+}
+​/* Media Gallery Zoom Effect */
+.img-hover-zoom {
+overflow: hidden;
+}
+.img-hover-zoom img {
+transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.img-hover-zoom:hover img {
+transform: scale(1.03);
+}
+​/* Animated background elements */
+.blob-bg {
+position: absolute;
+filter: blur(80px);
+z-index: 0;
+opacity: 0.4;
+border-radius: 50%;
+animation: float 20s infinite ease-in-out;
+}
+​@keyframes float {
+0%, 100% { transform: translate(0, 0) scale(1); }
+33% { transform: translate(30px, -50px) scale(1.1); }
+66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+​/* Page View Controller */
+.page-view {
+display: none;
+}
+.page-view.active {
+display: block;
+animation: fadeIn 0.4s ease-in-out forwards;
+}
+​@keyframes fadeIn {
+from { opacity: 0; transform: translateY(6px); }
+to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body class="font-sans pt-14 relative overflow-x-hidden">
+​<!-- Top Status Bar -->
+<div class="fixed top-0 left-0 w-full bg-apc-dark text-white text-[10px] sm:text-xs font-medium tracking-widest uppercase py-1.5 px-4 z-50 flex items-center justify-between shadow-sm">
+<div class="flex items-center">
+<div class="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 sm:mr-3 animate-pulse"></div>
+<span class="hidden sm:inline">Official Campaign Portal |</span> 2027 Mandate
+</div>
+<div class="flex gap-4 sm:gap-6">
+<a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-green-300 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="hover:text-green-300 transition-colors" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-green-300 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</div>
+​<!-- Main Header -->
+<header class="fixed top-[28px] sm:top-[32px] left-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 z-40 h-16 sm:h-20 flex items-center transition-all duration-300" id="main-header">
+<div class="container mx-auto px-4 md:px-8 w-full flex justify-between items-center max-w-7xl">
+​<!-- Brand / Logo -->
+<a href="#home" onclick="switchPage('home')" class="flex items-center gap-3 sm:gap-4 group">
+<div class="w-10 h-10 sm:w-12 sm:h-12 bg-apc-light text-apc-dark rounded-full flex items-center justify-center font-serif font-bold text-lg sm:text-xl border border-apc-dark/10 group-hover:bg-apc-dark group-hover:text-white transition-all duration-300 shadow-sm">
+BS
+</div>
+<div>
+<h1 class="font-bold text-gray-900 leading-tight text-sm sm:text-lg tracking-tight">BABATUNDE S. OGUNLADE</h1>
+<p class="text-[9px] sm:text-[11px] text-apc-gold font-bold uppercase tracking-widest mt-0.5">APC Candidate, Ibarapa East</p>
+</div>
+</a>
+​<!-- Desktop Navigation (Multi-Page simulation via JS router) -->
+<nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-gray-700">
+<button onclick="switchPage('home')" data-page="home" class="nav-link transition-colors py-2 text-apc-main font-bold">Home</button>
+<button onclick="switchPage('about')" data-page="about" class="nav-link transition-colors py-2 hover:text-apc-main">About BSO</button>
+<button onclick="switchPage('agenda')" data-page="agenda" class="nav-link transition-colors py-2 hover:text-apc-main">Legislative Agenda</button>
+<button onclick="switchPage('experience')" data-page="experience" class="nav-link transition-colors py-2 hover:text-apc-main">Experience Record</button>
+<button onclick="switchPage('media')" data-page="media" class="nav-link transition-colors py-2 hover:text-apc-main">Media Center</button>
+<button onclick="switchPage('contact')" class="bg-apc-dark text-white px-6 py-2.5 rounded-full hover:bg-apc-main transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Support Campaign</button>
+</nav>
+​<!-- Mobile Menu Toggle Button -->
+<button id="menu-toggle" class="lg:hidden w-10 h-10 rounded-full border border-gray-200 flex flex-col justify-center items-center gap-1.5 hover:bg-gray-50 transition-colors z-50 bg-white" aria-label="Toggle Menu">
+<span class="w-5 h-0.5 bg-gray-800 transition-transform duration-300 origin-center" id="bar1"></span>
+<span class="w-5 h-0.5 bg-gray-800 transition-opacity duration-300" id="bar2"></span>
+<span class="w-5 h-0.5 bg-gray-800 transition-transform duration-300 origin-center" id="bar3"></span>
+</button>
+</div>
+</header>
+​<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-30 pt-24 pb-6 overflow-y-auto hidden">
+<div class="bg-[#f4f7f5] min-h-[calc(100vh-6rem)] rounded-3xl p-5 menu-inner mx-4 shadow-2xl flex flex-col">
+<div class="bg-white rounded-2xl p-6 shadow-sm mb-4 flex-grow">
+<nav class="flex flex-col gap-5 font-bold text-gray-800 text-lg">
+<button onclick="switchPage('home'); toggleMenu();" class="text-left flex items-center justify-between border-b border-gray-50 pb-3 w-full">Home <i class="fa-solid fa-chevron-right text-sm text-gray-300"></i></button>
+<button onclick="switchPage('about'); toggleMenu();" class="text-left flex items-center justify-between border-b border-gray-50 pb-3 w-full">About BSO <i class="fa-solid fa-chevron-right text-sm text-gray-300"></i></button>
+<button onclick="switchPage('agenda'); toggleMenu();" class="text-left flex items-center justify-between border-b border-gray-50 pb-3 w-full">Legislative Agenda <i class="fa-solid fa-chevron-right text-sm text-gray-300"></i></button>
+<button onclick="switchPage('experience'); toggleMenu();" class="text-left flex items-center justify-between border-b border-gray-50 pb-3 w-full">Experience Record <i class="fa-solid fa-chevron-right text-sm text-gray-300"></i></button>
+<button onclick="switchPage('media'); toggleMenu();" class="text-left flex items-center justify-between border-b border-gray-50 pb-3 w-full">Media Center <i class="fa-solid fa-chevron-right text-sm text-gray-300"></i></button>
+<button onclick="switchPage('contact'); toggleMenu();" class="text-left flex items-center justify-between pb-1 w-full text-apc-main">Contact & Volunteer <i class="fa-solid fa-chevron-right text-sm text-gray-300"></i></button>
+</nav>
+</div>
+<button onclick="switchPage('contact'); toggleMenu();" class="w-full bg-apc-dark text-white rounded-2xl py-4 font-bold text-lg flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-transform mt-auto">
+<i class="fa-solid fa-handshake"></i> Support Campaign
+</button>
+</div>
+</div>
+​<!-- ========================================== -->
+<!-- MULTI-PAGE VIEW CONTAINERS                  -->
+<!-- ========================================== -->
+​<!-- PAGE 1: HOME PAGE -->
+<div id="page-home" class="page-view active">
+<!-- Hero Section -->
+<section class="pt-16 pb-16 lg:pt-24 lg:pb-24 px-4 md:px-8 container mx-auto max-w-7xl relative">
+<div class="blob-bg w-96 h-96 bg-green-100 top-10 left-[-100px]"></div>
+<div class="blob-bg w-80 h-80 bg-blue-50 bottom-0 right-[-50px] animation-delay-2000"></div>
+​<div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center relative z-10">
+<div class="max-w-3xl lg:w-1/2 flex-shrink-0 text-center lg:text-left">
+<div class="flex items-center justify-center lg:justify-start gap-3 mb-6">
+<div class="h-[2px] w-12 bg-apc-gold"></div>
+<span class="eyebrow text-apc-gold">2027 Representation</span>
+</div>
+​<h2 class="serif-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 leading-[1.1] mb-6">
+A future defined by <span class="text-apc-main">collective effort.</span>
+</h2>
+​<div class="space-y-6 text-gray-600 sm:text-lg leading-relaxed mb-10">
+<blockquote class="font-medium text-gray-800 text-xl sm:text-2xl border-l-4 border-apc-gold pl-4 sm:pl-6 text-left italic">
+"I am ready to serve you, but I cannot do it alone. Join me in this journey, let us together make history."
+</blockquote>
+<p class="text-left">
+Welcome to the official campaign portal for Hon. Babatunde Sunday Ogunlade. Explore our agenda, review our qualifications, and partner with us to transform Ibarapa East State Constituency.
+</p>
+</div>
+​<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<button onclick="switchPage('about')" class="bg-apc-dark text-white px-8 py-4 rounded-full font-bold hover:bg-apc-main transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
+Why BSO? <i class="fa-solid fa-arrow-right text-sm"></i>
+</button>
+<button onclick="switchPage('agenda')" class="bg-white border-2 border-gray-200 text-gray-800 px-8 py-4 rounded-full font-bold hover:border-apc-main hover:text-apc-main transition-colors flex items-center justify-center">
+Read the Agenda
+</button>
+</div>
+</div>
+​<!-- Hero Poster Graphic -->
+<div class="lg:w-1/2 w-full max-w-lg mx-auto lg:max-w-none">
+<div class="relative rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100 transform lg:rotate-2 hover:rotate-0 transition-transform duration-500 bg-white">
+<img src="876469f9-88b6-40e4-87c3-96419a4af639-1_all_1247.png" alt="Hon. Babatunde Sunday Ogunlade Campaign Poster" class="w-full h-auto object-cover">
+<div class="absolute -bottom-2 -left-2 sm:bottom-6 sm:-left-6 z-20 bg-white/95 backdrop-blur shadow-xl rounded-2xl p-3 sm:p-4 flex items-center gap-3 sm:gap-4 border border-gray-100">
+<div class="w-10 h-10 sm:w-12 sm:h-12 bg-green-50 rounded-full flex items-center justify-center text-green-600 font-bold text-lg sm:text-xl">
+<i class="fa-solid fa-check-to-slot"></i>
+</div>
+<div>
+<div class="text-[9px] sm:text-[10px] uppercase font-bold text-gray-500 tracking-wider">Candidate</div>
+<div class="font-black text-gray-900 text-sm sm:text-base">Ibarapa East</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+​<!-- Key Stats Section -->
+<section class="border-y border-gray-200 bg-gray-50/50">
+<div class="container mx-auto max-w-7xl px-4 md:px-8">
+<div class="grid grid-cols-2 lg:grid-cols-4 stat-grid-lines divide-x divide-gray-200">
+<div class="p-6 sm:p-10 stat-border-b lg:stat-border-b-0 text-center">
+<div class="font-serif font-black text-4xl sm:text-5xl text-apc-dark mb-2">10</div>
+<div class="text-xs sm:text-sm text-gray-500 font-bold uppercase tracking-widest">Wards Covered</div>
+</div>
+<div class="p-6 sm:p-10 stat-border-b lg:stat-border-b-0 text-center">
+<div class="font-serif font-black text-4xl sm:text-5xl text-apc-dark mb-2">4</div>
+<div class="text-xs sm:text-sm text-gray-500 font-bold uppercase tracking-widest">Legislative Pillars</div>
+</div>
+<div class="p-6 sm:p-10 text-center">
+<div class="font-serif font-black text-4xl sm:text-5xl text-apc-dark mb-2">100<span class="text-2xl text-gray-400">%</span></div>
+<div class="text-xs sm:text-sm text-gray-500 font-bold uppercase tracking-widest">Commitment</div>
+</div>
+<div class="p-6 sm:p-10 text-center flex flex-col items-center justify-center">
+<div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-3 border border-gray-100 transform -rotate-3">
+<i class="fa-solid fa-broom text-2xl text-apc-main"></i>
+</div>
+<div class="text-xs sm:text-sm text-gray-500 font-bold uppercase tracking-widest">Progressive Platform</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+​<!-- PAGE 2: ABOUT BSO PAGE -->
+<div id="page-about" class="page-view py-16 px-4 md:px-8 container mx-auto max-w-7xl">
+<div class="text-center mb-16 lg:mb-20">
+<div class="flex items-center justify-center gap-3 mb-4">
+<div class="h-[2px] w-12 bg-apc-main"></div>
+<span class="eyebrow text-apc-main">The Qualifications</span>
+<div class="h-[2px] w-12 bg-apc-main"></div>
+</div>
+<h2 class="serif-heading text-4xl md:text-5xl font-black text-gray-900 mb-6">Leadership You Can Trust.</h2>
+<p class="text-xl text-gray-500 max-w-2xl mx-auto font-medium">Competence. Integrity. Vision. Results.</p>
+</div>
+​<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2 w-full">
+<div class="rounded-3xl overflow-hidden shadow-2xl border border-gray-100 bg-gray-50 p-2 sm:p-4">
+<img src="876469f9-88b6-40e4-87c3-96419a4af639-1_all_5256.jpg" alt="Why Babatunde Sunday Ogunlade?" class="w-full h-auto rounded-2xl">
+</div>
+</div>
+​<div class="lg:w-1/2 w-full space-y-8">
+<div class="flex gap-5 items-start group">
+<div class="w-14 h-14 rounded-2xl bg-green-50 text-apc-main flex items-center justify-center flex-shrink-0 text-2xl shadow-sm border border-green-100">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+<div>
+<h3 class="font-bold text-2xl text-gray-900 mb-2 font-serif">Tested Professional & Expert</h3>
+<p class="text-gray-600 leading-relaxed">Bringing years of administrative experience and financial expertise from the private sector to ensure efficient governance and public accountability.</p>
+</div>
+</div>
+​<div class="flex gap-5 items-start group">
+<div class="w-14 h-14 rounded-2xl bg-green-50 text-apc-main flex items-center justify-center flex-shrink-0 text-2xl shadow-sm border border-green-100">
+<i class="fa-solid fa-users"></i>
+</div>
+<div>
+<h3 class="font-bold text-2xl text-gray-900 mb-2 font-serif">Grassroots Community Builder</h3>
+<p class="text-gray-600 leading-relaxed">An accessible representative deeply connected to the unique fabric of Ibarapa East communities across Lanlate, Eruwa, and surrounding towns.</p>
+</div>
+</div>
+​<div class="flex gap-5 items-start group">
+<div class="w-14 h-14 rounded-2xl bg-green-50 text-apc-main flex items-center justify-center flex-shrink-0 text-2xl shadow-sm border border-green-100">
+<i class="fa-solid fa-lightbulb"></i>
+</div>
+<div>
+<h3 class="font-bold text-2xl text-gray-900 mb-2 font-serif">Development-Oriented Vision</h3>
+<p class="text-gray-600 leading-relaxed">Focused on actionable legislative frameworks that prioritize local agricultural growth, infrastructure, and youth empowerment.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+​<!-- PAGE 3: LEGISLATIVE AGENDA PAGE -->
+<div id="page-agenda" class="page-view py-16 px-4 md:px-8 container mx-auto max-w-6xl">
+<div class="text-center mb-16">
+<div class="flex items-center justify-center gap-3 mb-4">
+<div class="h-[2px] w-12 bg-apc-main"></div>
+<span class="eyebrow text-apc-main">Proposed Manifesto</span>
+<div class="h-[2px] w-12 bg-apc-main"></div>
+</div>
+<h2 class="serif-heading text-4xl md:text-5xl font-black text-gray-900 mb-6">Legislative Agenda for 2027</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Structured legislative pillars designed for verifiable progress in Ibarapa East.</p>
+</div>
+​<div class="space-y-6 lg:space-y-8">
+<!-- Pillar 1 -->
+<div class="bg-apc-dark text-white rounded-[2rem] p-8 md:p-12 shadow-xl relative overflow-hidden agenda-card">
+<div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-grow">
+<span class="eyebrow text-apc-gold">Primary Focus</span>
+<h3 class="serif-heading text-3xl md:text-4xl font-bold my-4">Agricultural Revitalization & Market Access</h3>
+<p class="text-gray-300 leading-relaxed text-lg mb-6">
+Attracting state and private partnerships for modern farming equipment, seedling distribution, and the rehabilitation of critical feeder roads connecting farmers to major urban markets.
+</p>
+<span class="inline-block border border-white/20 bg-white/5 rounded-full px-5 py-2 text-sm font-bold tracking-widest uppercase">PILLAR I</span>
+</div>
+<div class="w-24 h-24 sm:w-32 sm:h-32 bg-white/5 rounded-full flex items-center justify-center flex-shrink-0 border border-white/10">
+<i class="fa-solid fa-tractor text-4xl sm:text-5xl text-apc-gold"></i>
+</div>
+</div>
+</div>
+​<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+<!-- Pillar 2 -->
+<div class="bg-white rounded-[2rem] p-8 md:p-10 shadow-md border border-gray-100 agenda-card flex flex-col justify-between">
+<div>
+<span class="eyebrow text-gray-500">Infrastructure</span>
+<h3 class="serif-heading text-2xl font-bold text-gray-900 my-3">Rural Electrification & Roads</h3>
+<p class="text-gray-600 text-lg mb-6">
+Ensuring Ibarapa East receives its fair share of state infrastructure budgets, focusing heavily on stable electricity supply and intra-city connectivity.
+</p>
+</div>
+<div class="flex justify-between items-end border-t border-gray-100 pt-6">
+<span class="font-bold tracking-widest text-sm text-gray-400">PILLAR II</span>
+<div class="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center">
+<i class="fa-solid fa-road text-gray-400 text-xl"></i>
+</div>
+</div>
+</div>
+​<!-- Pillar 3 -->
+<div class="bg-white rounded-[2rem] p-8 md:p-10 shadow-md border border-gray-100 agenda-card flex flex-col justify-between">
+<div>
+<span class="eyebrow text-gray-500">Youth & Enterprise</span>
+<h3 class="serif-heading text-2xl font-bold text-gray-900 my-3">Ibarapa Skills & Tech Hub</h3>
+<p class="text-gray-600 text-lg mb-6">
+Driving legislation to establish localized vocational and tech training centers to combat youth unemployment through structured private sector models.
+</p>
+</div>
+<div class="flex justify-between items-end border-t border-gray-100 pt-6">
+<span class="font-bold tracking-widest text-sm text-gray-400">PILLAR III</span>
+<div class="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center">
+<i class="fa-solid fa-laptop-code text-gray-400 text-xl"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+​<!-- PAGE 4: EXPERIENCE RECORD PAGE -->
+<div id="page-experience" class="page-view py-16 px-4 md:px-8 bg-apc-dark text-white relative overflow-hidden">
+<div class="container mx-auto max-w-7xl relative z-10">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-5/12 w-full max-w-md mx-auto lg:max-w-none">
+<div class="rounded-3xl overflow-hidden shadow-2xl relative border border-white/10 group">
+<img src="4418043.jpg" alt="Hon. Babatunde Ogunlade in office" class="w-full h-auto object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8">
+<div class="w-12 h-1 bg-apc-gold mb-4"></div>
+<p class="text-xs font-bold text-apc-gold tracking-widest uppercase mb-1">Enterprise Record</p>
+<p class="font-black text-2xl font-serif text-white">Tested Administrator</p>
+</div>
+</div>
+</div>
+​<div class="lg:w-7/12 w-full">
+<div class="flex items-center gap-3 mb-6">
+<div class="h-[2px] w-12 bg-green-400"></div>
+<span class="eyebrow text-green-400">Private Sector Success</span>
+</div>
+​<h2 class="serif-heading text-4xl md:text-5xl font-black mb-8 leading-[1.1]">
+Experience that understands our people.
+</h2>
+​<div class="space-y-6 text-gray-300 text-lg leading-relaxed mb-10 font-light">
+<p>
+Before entering public service, Hon. Babatunde Ogunlade built a solid reputation in business administration. His leadership at Skylark demonstrates a proven ability to manage complex projects, allocate resources efficiently, and execute sustainable long-term strategies.
+</p>
+<p>
+These are the exact managerial competencies required in the Oyo State House of Assembly to ensure optimal constituency representation and tangible dividends of democracy.
+</p>
+</div>
+​<div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-10">
+<div>
+<div class="text-4xl font-black text-white mb-2 font-serif">15+</div>
+<div class="text-sm text-gray-400 font-bold uppercase tracking-wider">Years Experience</div>
+</div>
+<div>
+<div class="text-4xl font-black text-white mb-2 font-serif">100%</div>
+<div class="text-sm text-gray-400 font-bold uppercase tracking-wider">Commitment</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+​<!-- PAGE 5: MEDIA CENTER PAGE -->
+<div id="page-media" class="page-view py-16 px-4 md:px-8 container mx-auto max-w-7xl">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="h-[2px] w-12 bg-apc-main"></div>
+<span class="eyebrow text-apc-main">Media Center</span>
+</div>
+<h2 class="serif-heading text-4xl font-black text-gray-900">Campaign Visuals & Posters</h2>
+</div>
+<p class="text-gray-500 max-w-md md:text-right font-medium">Download and share official campaign graphics across your networks.</p>
+</div>
+​<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+<div class="rounded-3xl overflow-hidden shadow-xl img-hover-zoom border border-gray-200 relative bg-gray-100">
+<img src="876469f9-88b6-40e4-87c3-96419a4af639-1_all_5819.jpg" alt="Campaign Poster 1" class="w-full h-auto">
+</div>
+<div class="rounded-3xl overflow-hidden shadow-xl img-hover-zoom border border-gray-200 relative bg-gray-100">
+<img src="876469f9-88b6-40e4-87c3-96419a4af639-1_all_7162.jpg" alt="Campaign Poster 2" class="w-full h-auto">
+</div>
+</div>
+</div>
+​<!-- PAGE 6: CONTACT & VOLUNTEER PAGE -->
+<div id="page-contact" class="page-view py-16 px-4 md:px-8 container mx-auto max-w-4xl">
+<div class="bg-[#031c12] text-white p-8 sm:p-12 rounded-3xl shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-80 h-80 bg-apc-main rounded-full blur-[80px] opacity-40 pointer-events-none"></div>
+<div class="relative z-10">
+<span class="eyebrow text-apc-gold mb-2 block">Get Involved</span>
+<h2 class="serif-heading text-3xl sm:text-4xl font-bold mb-4">Join the Volunteer Corps</h2>
+<p class="text-gray-300 mb-8 text-lg">Sign up to receive campaign updates, event schedules, and discover ways to support the movement in your ward.</p>
+​<form onsubmit="handleFormSubmit(event)" class="space-y-5">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<input type="text" placeholder="Full Name" required class="w-full bg-black/30 border border-white/20 rounded-xl py-4 px-5 text-white placeholder-gray-400 focus:outline-none focus:border-apc-gold">
+<input type="text" placeholder="Ward / Location (e.g. Eruwa Ward 1)" required class="w-full bg-black/30 border border-white/20 rounded-xl py-4 px-5 text-white placeholder-gray-400 focus:outline-none focus:border-apc-gold">
+</div>
+<div class="relative">
+<input type="email" placeholder="Email Address" required class="w-full bg-black/30 border border-white/20 rounded-xl py-4 px-5 text-white placeholder-gray-400 focus:outline-none focus:border-apc-gold">
+</div>
+<button type="submit" class="w-full bg-apc-gold text-black font-black rounded-xl py-4 px-8 hover:bg-white transition-colors flex items-center justify-center gap-2 shadow-lg">
+Register as Volunteer <i class="fa-solid fa-arrow-right"></i>
+</button>
+</form>
+<div id="success-msg" class="hidden mt-4 p-4 bg-green-900/80 border border-green-500 rounded-xl text-green-200 text-center font-medium">
+Thank you for joining! We will contact you shortly with ward coordination details.
+</div>
+</div>
+</div>
+</div>
+​<!-- Footer Section -->
+<footer class="bg-[#031c12] text-white pt-20 pb-10 border-t-[12px] border-apc-main relative overflow-hidden mt-20">
+<div class="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
+<div class="flex flex-col lg:flex-row justify-between gap-16 mb-16 border-b border-white/10 pb-16">
+<div class="lg:w-2/5">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 bg-white text-apc-dark rounded-full flex items-center justify-center font-serif font-black text-3xl">
+BS
+</div>
+<div>
+<div class="text-xs text-apc-gold font-bold uppercase tracking-widest mb-1">HONORABLE</div>
+<h2 class="text-2xl font-black leading-tight">Babatunde Ogunlade</h2>
+<p class="text-sm text-gray-400 mt-1">APC Candidate, Ibarapa East</p>
+</div>
+</div>
+<p class="text-gray-400 leading-relaxed mb-8 text-lg">
+A campaign built on proven competence, unquestionable integrity, and a clear vision for verifiable progress in the Oyo State House of Assembly.
+</p>
+<div class="flex gap-4">
+<a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-apc-dark transition-all text-xl" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-apc-dark transition-all text-xl" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-apc-dark transition-all text-xl" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</div>
+​<!-- Footer Navigation Blocks -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8 lg:w-1/2">
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-apc-gold">Navigation</h4>
+<ul class="space-y-4 text-gray-400 font-medium text-sm">
+<li><button onclick="switchPage('home')" class="hover:text-white transition-colors">Home</button></li>
+<li><button onclick="switchPage('about')" class="hover:text-white transition-colors">About BSO</button></li>
+<li><button onclick="switchPage('agenda')" class="hover:text-white transition-colors">Legislative Agenda</button></li>
+<li><button onclick="switchPage('experience')" class="hover:text-white transition-colors">Experience Record</button></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-apc-gold">Resources</h4>
+<ul class="space-y-4 text-gray-400 font-medium text-sm">
+<li><button onclick="switchPage('media')" class="hover:text-white transition-colors">Media Gallery</button></li>
+<li><button onclick="switchPage('contact')" class="hover:text-white transition-colors">Volunteer Hub</button></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-apc-gold">Secretariat</h4>
+<p class="text-gray-400 text-sm leading-relaxed">
+BSO Campaign Secretariat,
+Ibarapa East State Constituency,
+Oyo State, Nigeria.
+</p>
+</div>
+</div>
+</div>
+​<div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 border-t border-white/10 pt-8">
+<p>© <script>document.write(new Date().getFullYear())</script> Babatunde Sunday Ogunlade Campaign. All rights reserved.</p>
+<div class="mt-4 md:mt-0 flex items-center gap-4">
+<span class="flex items-center gap-2">Platform: <span class="text-white font-black bg-apc-main border border-white/20 px-3 py-1 rounded text-xs tracking-widest">APC</span></<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Babatunde Sunday Ogunlade | Official Campaign Portal 2027</title>
+​<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+​<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+​<!-- Tailwind CSS Configuration -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+apc: {
+dark: '#052e1f',    // Deep institutional green
+main: '#0a432e',    // Primary green
+light: '#e8f2ed',   // Light background tint
+accent: '#106b4a',  // Brighter green for accents
+gold: '#c29b40'     // Gold accent from poster
+}
+},
+fontFamily: {
+sans: ['Inter', 'sans-serif'],
+serif: ['Lora', 'serif'],
+}
+}
+}
+}
+</script>
+​<!-- Custom CSS Styles -->
+<style>
+body {
+background-color: #ffffff;
+color: #1a1a1a;
+-webkit-font-smoothing: antialiased;
+}
+​/* Stats Grid Borders */
+.stat-grid-lines { border-bottom: 1px solid #e5e7eb; }
+@media (min-width: 768px) {
+.stat-border-r { border-right: 1px solid #e5e7eb; }
+.stat-border-b { border-bottom: 1px solid #e5e7eb; }
+}
+​/* Mobile Menu Transitions */
+#mobile-menu {
+transition: opacity 0.3s ease, visibility 0.3s ease;
+opacity: 0;
+visibility: hidden;
+}
+#mobile-menu.open {
+opacity: 1;
+visibility: visible;
+}
+​.menu-inner {
+transform: translateY(-20px);
+transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#mobile-menu.open .menu-inner {
+transform: translateY(0);
+}
+​/* Card Interactions */
+.agenda-card {
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.agenda-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.08);
+}
+​/* Typography Utilities */
+.serif-heading {
+font-family: 'Lora', serif;
+letter-spacing: -0.02em;
+}
+​.eyebrow {
+font-size: 0.7rem;
+text-transform: uppercase;
+letter-spacing: 0.15em;
+font-weight: 700;
+}
+​/* Media Gallery Zoom Effect */
+.img-hover-zoom {
+overflow: hidden;
+}
+.img-hover-zoom img {
+transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.img-hover-zoom:hover img {
+transform: scale(1.03);
+}
+​/* Animated background elements */
+.blob-bg {
+position: absolute;
+filter: blur(80px);
+z-index: 0;
+opacity: 0.4;
+border-radius: 50%;
+animation: float 20s infinite ease-in-out;
+}
+​@keyframes float {
+0%, 100% { transform: translate(0, 0) scale(1); }
+33% { transform: translate(30px, -50px) scale(1.1); }
+66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+​/* Page View Controller */
+.page-view {
+display: none;
+}
+.page-view.active {
+display: block;
+animation: fadeIn 0.4s ease-in-out forwards;
+}
+​@keyframes fadeIn {
+from { opacity: 0; transform: translateY(6px); }
+to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body class="font-sans pt-14 relative overflow-x-hidden">
+​<!-- Top Status Bar -->
+<div class="fixed top-0 left-0 w-full bg-apc-dark text-white text-[10px] sm:text-xs font-medium tracking-widest uppercase py-1.5 px-4 z-50 flex items-center justify-between shadow-sm">
+<div class="flex items-center">
+<div class="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 sm:mr-3 animate-pulse"></div>
+<span class="hidden sm:inline">Official Campaign Portal |</span> 2027 Mandate
+</div>
+<div class="flex gap-4 sm:gap-6">
+<a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-green-300 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="hover:text-green-300 transition-colors" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-green-300 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</div>
+​<!-- Main Header -->
+<header class="fixed top-[28px] sm:top-[32px] left-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 z-40 h-16 sm:h-20 flex items-center transition-all duration-300" id="main-header">
+<div class="container mx-auto px-4 md:px-8 w-full flex justify-between items-center max-w-7xl">
+​<!-- Brand / Logo -->
+<a href="#home" onclick="switchPage('home')" class="flex items-center gap-3 sm:gap-4 group">
+<div class="w-10 h-10 sm:w-12 sm:h-12 bg-apc-light text-apc-dark rounded-full flex items-center justify-center font-serif font-bold text-lg sm:text-xl border border-apc-dark/10 group-hover:bg-apc-dark group-hover:text-white transition-all duration-300 shadow-sm">
+BS
+</div>
+<div>
+<h1 class="font-bold text-gray-900 leading-tight text-sm sm:text-lg tracking-tight">BABATUNDE S. OGUNLADE</h1>
+<p class="text-[9px] sm:text-[11px] text-apc-gold font-bold uppercase tracking-widest mt-0.5">APC Candidate, Ibarapa East</p>
+</div>
+</a>
+​<!-- Desktop Navigation (Multi-Page simulation via JS router) -->
+<nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-gray-700">
+<button onclick="switchPage('home')" data-page="home" class="nav-link transition-colors py-2 text-apc-main font-bold">Home</button>
+<button onclick="switchPage('about')" data-page="about" class="nav-link transition-colors py-2 hover:text-apc-main">About BSO</button>
+<button onclick="switchPage('agenda')" data-page="agenda" class="nav-link transition-colors py-2 hover:text-apc-main">Legislative Agenda</button>
+<button onclick="switchPage('experience')" data-page="experience" class="nav-link transition-colors py-2 hover:text-apc-main">Experience Record</button>
+<button onclick="switchPage('media')" data-page="media" class="nav-link transition-colors py-2 hover:text-apc-main">Media Center</button>
+<button onclick="switchPage('contact')" class="bg-apc-dark text-white px-6 py-2.5 rounded-full hover:bg-apc-main transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Support Campaign</button>
+</nav>
+​<!-- Mobile Menu Toggle Button -->
+<button id="menu-toggle" class="lg:hidden w-10 h-10 rounded-full border border-gray-200 flex flex-col justify-center items-center gap-1.5 hover:bg-gray-50 transition-colors z-50 bg-white" aria-label="Toggle Menu">
+<span class="w-5 h-0.5 bg-gray-800 transition-transform duration-300 origin-center" id="bar1"></span>
+<span class="w-5 h-0.5 bg-gray-800 transition-opacity duration-300" id="bar2"></span>
+<span class="w-5 h-0.5 bg-gray-800 transition-transform duration-300 origin-center" id="bar3"></span>
+</button>
+</div>
+</header>
+​<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-30 pt-24 pb-6 overflow-y-auto hidden">
+<div class="bg-[#f4f7f5] min-h-[calc(100vh-6rem)] rounded-3xl p-5 menu-inner mx-4 shadow-2xl flex flex-col">
+<div class="bg-white rounded-2xl p-6 shadow-sm mb-4 flex-grow">
+<nav class="flex flex-col gap-5 font-bold text-gray-800 text-lg">
+<button onclick="switchPage('home'); toggleMenu();" class="text-left flex items-center justify-between border-b border-gray-50 pb-3 w-full">Home <i class="fa-solid fa-chevron-right text-sm text-gray-300"></i></button>
+<button onclick="switchPage('about'); toggleMenu();" class="text-left flex items-center justify-between border-b border-gray-50 pb-3 w-full">About BSO <i class="fa-solid fa-chevron-right text-sm text-gray-300"></i></button>
+<button onclick="switchPage('agenda'); toggleMenu();" class="text-left flex items-center justify-between border-b border-gray-50 pb-3 w-full">Legislative Agenda <i class="fa-solid fa-chevron-right text-sm text-gray-300"></i></button>
+<button onclick="switchPage('experience'); toggleMenu();" class="text-left flex items-center justify-between border-b border-gray-50 pb-3 w-full">Experience Record <i class="fa-solid fa-chevron-right text-sm text-gray-300"></i></button>
+<button onclick="switchPage('media'); toggleMenu();" class="text-left flex items-center justify-between border-b border-gray-50 pb-3 w-full">Media Center <i class="fa-solid fa-chevron-right text-sm text-gray-300"></i></button>
+<button onclick="switchPage('contact'); toggleMenu();" class="text-left flex items-center justify-between pb-1 w-full text-apc-main">Contact & Volunteer <i class="fa-solid fa-chevron-right text-sm text-gray-300"></i></button>
+</nav>
+</div>
+<button onclick="switchPage('contact'); toggleMenu();" class="w-full bg-apc-dark text-white rounded-2xl py-4 font-bold text-lg flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-transform mt-auto">
+<i class="fa-solid fa-handshake"></i> Support Campaign
+</button>
+</div>
+</div>
+​<!-- ========================================== -->
+<!-- MULTI-PAGE VIEW CONTAINERS                  -->
+<!-- ========================================== -->
+​<!-- PAGE 1: HOME PAGE -->
+<div id="page-home" class="page-view active">
+<!-- Hero Section -->
+<section class="pt-16 pb-16 lg:pt-24 lg:pb-24 px-4 md:px-8 container mx-auto max-w-7xl relative">
+<div class="blob-bg w-96 h-96 bg-green-100 top-10 left-[-100px]"></div>
+<div class="blob-bg w-80 h-80 bg-blue-50 bottom-0 right-[-50px] animation-delay-2000"></div>
+​<div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center relative z-10">
+<div class="max-w-3xl lg:w-1/2 flex-shrink-0 text-center lg:text-left">
+<div class="flex items-center justify-center lg:justify-start gap-3 mb-6">
+<div class="h-[2px] w-12 bg-apc-gold"></div>
+<span class="eyebrow text-apc-gold">2027 Representation</span>
+</div>
+​<h2 class="serif-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 leading-[1.1] mb-6">
+A future defined by <span class="text-apc-main">collective effort.</span>
+</h2>
+​<div class="space-y-6 text-gray-600 sm:text-lg leading-relaxed mb-10">
+<blockquote class="font-medium text-gray-800 text-xl sm:text-2xl border-l-4 border-apc-gold pl-4 sm:pl-6 text-left italic">
+"I am ready to serve you, but I cannot do it alone. Join me in this journey, let us together make history."
+</blockquote>
+<p class="text-left">
+Welcome to the official campaign portal for Hon. Babatunde Sunday Ogunlade. Explore our agenda, review our qualifications, and partner with us to transform Ibarapa East State Constituency.
+</p>
+</div>
+​<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<button onclick="switchPage('about')" class="bg-apc-dark text-white px-8 py-4 rounded-full font-bold hover:bg-apc-main transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
+Why BSO? <i class="fa-solid fa-arrow-right text-sm"></i>
+</button>
+<button onclick="switchPage('agenda')" class="bg-white border-2 border-gray-200 text-gray-800 px-8 py-4 rounded-full font-bold hover:border-apc-main hover:text-apc-main transition-colors flex items-center justify-center">
+Read the Agenda
+</button>
+</div>
+</div>
+​<!-- Hero Poster Graphic -->
+<div class="lg:w-1/2 w-full max-w-lg mx-auto lg:max-w-none">
+<div class="relative rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100 transform lg:rotate-2 hover:rotate-0 transition-transform duration-500 bg-white">
+<img src="876469f9-88b6-40e4-87c3-96419a4af639-1_all_1247.png" alt="Hon. Babatunde Sunday Ogunlade Campaign Poster" class="w-full h-auto object-cover">
+<div class="absolute -bottom-2 -left-2 sm:bottom-6 sm:-left-6 z-20 bg-white/95 backdrop-blur shadow-xl rounded-2xl p-3 sm:p-4 flex items-center gap-3 sm:gap-4 border border-gray-100">
+<div class="w-10 h-10 sm:w-12 sm:h-12 bg-green-50 rounded-full flex items-center justify-center text-green-600 font-bold text-lg sm:text-xl">
+<i class="fa-solid fa-check-to-slot"></i>
+</div>
+<div>
+<div class="text-[9px] sm:text-[10px] uppercase font-bold text-gray-500 tracking-wider">Candidate</div>
+<div class="font-black text-gray-900 text-sm sm:text-base">Ibarapa East</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+​<!-- Key Stats Section -->
+<section class="border-y border-gray-200 bg-gray-50/50">
+<div class="container mx-auto max-w-7xl px-4 md:px-8">
+<div class="grid grid-cols-2 lg:grid-cols-4 stat-grid-lines divide-x divide-gray-200">
+<div class="p-6 sm:p-10 stat-border-b lg:stat-border-b-0 text-center">
+<div class="font-serif font-black text-4xl sm:text-5xl text-apc-dark mb-2">10</div>
+<div class="text-xs sm:text-sm text-gray-500 font-bold uppercase tracking-widest">Wards Covered</div>
+</div>
+<div class="p-6 sm:p-10 stat-border-b lg:stat-border-b-0 text-center">
+<div class="font-serif font-black text-4xl sm:text-5xl text-apc-dark mb-2">4</div>
+<div class="text-xs sm:text-sm text-gray-500 font-bold uppercase tracking-widest">Legislative Pillars</div>
+</div>
+<div class="p-6 sm:p-10 text-center">
+<div class="font-serif font-black text-4xl sm:text-5xl text-apc-dark mb-2">100<span class="text-2xl text-gray-400">%</span></div>
+<div class="text-xs sm:text-sm text-gray-500 font-bold uppercase tracking-widest">Commitment</div>
+</div>
+<div class="p-6 sm:p-10 text-center flex flex-col items-center justify-center">
+<div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-3 border border-gray-100 transform -rotate-3">
+<i class="fa-solid fa-broom text-2xl text-apc-main"></i>
+</div>
+<div class="text-xs sm:text-sm text-gray-500 font-bold uppercase tracking-widest">Progressive Platform</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+​<!-- PAGE 2: ABOUT BSO PAGE -->
+<div id="page-about" class="page-view py-16 px-4 md:px-8 container mx-auto max-w-7xl">
+<div class="text-center mb-16 lg:mb-20">
+<div class="flex items-center justify-center gap-3 mb-4">
+<div class="h-[2px] w-12 bg-apc-main"></div>
+<span class="eyebrow text-apc-main">The Qualifications</span>
+<div class="h-[2px] w-12 bg-apc-main"></div>
+</div>
+<h2 class="serif-heading text-4xl md:text-5xl font-black text-gray-900 mb-6">Leadership You Can Trust.</h2>
+<p class="text-xl text-gray-500 max-w-2xl mx-auto font-medium">Competence. Integrity. Vision. Results.</p>
+</div>
+​<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2 w-full">
+<div class="rounded-3xl overflow-hidden shadow-2xl border border-gray-100 bg-gray-50 p-2 sm:p-4">
+<img src="876469f9-88b6-40e4-87c3-96419a4af639-1_all_5256.jpg" alt="Why Babatunde Sunday Ogunlade?" class="w-full h-auto rounded-2xl">
+</div>
+</div>
+​<div class="lg:w-1/2 w-full space-y-8">
+<div class="flex gap-5 items-start group">
+<div class="w-14 h-14 rounded-2xl bg-green-50 text-apc-main flex items-center justify-center flex-shrink-0 text-2xl shadow-sm border border-green-100">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+<div>
+<h3 class="font-bold text-2xl text-gray-900 mb-2 font-serif">Tested Professional & Expert</h3>
+<p class="text-gray-600 leading-relaxed">Bringing years of administrative experience and financial expertise from the private sector to ensure efficient governance and public accountability.</p>
+</div>
+</div>
+​<div class="flex gap-5 items-start group">
+<div class="w-14 h-14 rounded-2xl bg-green-50 text-apc-main flex items-center justify-center flex-shrink-0 text-2xl shadow-sm border border-green-100">
+<i class="fa-solid fa-users"></i>
+</div>
+<div>
+<h3 class="font-bold text-2xl text-gray-900 mb-2 font-serif">Grassroots Community Builder</h3>
+<p class="text-gray-600 leading-relaxed">An accessible representative deeply connected to the unique fabric of Ibarapa East communities across Lanlate, Eruwa, and surrounding towns.</p>
+</div>
+</div>
+​<div class="flex gap-5 items-start group">
+<div class="w-14 h-14 rounded-2xl bg-green-50 text-apc-main flex items-center justify-center flex-shrink-0 text-2xl shadow-sm border border-green-100">
+<i class="fa-solid fa-lightbulb"></i>
+</div>
+<div>
+<h3 class="font-bold text-2xl text-gray-900 mb-2 font-serif">Development-Oriented Vision</h3>
+<p class="text-gray-600 leading-relaxed">Focused on actionable legislative frameworks that prioritize local agricultural growth, infrastructure, and youth empowerment.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+​<!-- PAGE 3: LEGISLATIVE AGENDA PAGE -->
+<div id="page-agenda" class="page-view py-16 px-4 md:px-8 container mx-auto max-w-6xl">
+<div class="text-center mb-16">
+<div class="flex items-center justify-center gap-3 mb-4">
+<div class="h-[2px] w-12 bg-apc-main"></div>
+<span class="eyebrow text-apc-main">Proposed Manifesto</span>
+<div class="h-[2px] w-12 bg-apc-main"></div>
+</div>
+<h2 class="serif-heading text-4xl md:text-5xl font-black text-gray-900 mb-6">Legislative Agenda for 2027</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Structured legislative pillars designed for verifiable progress in Ibarapa East.</p>
+</div>
+​<div class="space-y-6 lg:space-y-8">
+<!-- Pillar 1 -->
+<div class="bg-apc-dark text-white rounded-[2rem] p-8 md:p-12 shadow-xl relative overflow-hidden agenda-card">
+<div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-grow">
+<span class="eyebrow text-apc-gold">Primary Focus</span>
+<h3 class="serif-heading text-3xl md:text-4xl font-bold my-4">Agricultural Revitalization & Market Access</h3>
+<p class="text-gray-300 leading-relaxed text-lg mb-6">
+Attracting state and private partnerships for modern farming equipment, seedling distribution, and the rehabilitation of critical feeder roads connecting farmers to major urban markets.
+</p>
+<span class="inline-block border border-white/20 bg-white/5 rounded-full px-5 py-2 text-sm font-bold tracking-widest uppercase">PILLAR I</span>
+</div>
+<div class="w-24 h-24 sm:w-32 sm:h-32 bg-white/5 rounded-full flex items-center justify-center flex-shrink-0 border border-white/10">
+<i class="fa-solid fa-tractor text-4xl sm:text-5xl text-apc-gold"></i>
+</div>
+</div>
+</div>
+​<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+<!-- Pillar 2 -->
+<div class="bg-white rounded-[2rem] p-8 md:p-10 shadow-md border border-gray-100 agenda-card flex flex-col justify-between">
+<div>
+<span class="eyebrow text-gray-500">Infrastructure</span>
+<h3 class="serif-heading text-2xl font-bold text-gray-900 my-3">Rural Electrification & Roads</h3>
+<p class="text-gray-600 text-lg mb-6">
+Ensuring Ibarapa East receives its fair share of state infrastructure budgets, focusing heavily on stable electricity supply and intra-city connectivity.
+</p>
+</div>
+<div class="flex justify-between items-end border-t border-gray-100 pt-6">
+<span class="font-bold tracking-widest text-sm text-gray-400">PILLAR II</span>
+<div class="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center">
+<i class="fa-solid fa-road text-gray-400 text-xl"></i>
+</div>
+</div>
+</div>
+​<!-- Pillar 3 -->
+<div class="bg-white rounded-[2rem] p-8 md:p-10 shadow-md border border-gray-100 agenda-card flex flex-col justify-between">
+<div>
+<span class="eyebrow text-gray-500">Youth & Enterprise</span>
+<h3 class="serif-heading text-2xl font-bold text-gray-900 my-3">Ibarapa Skills & Tech Hub</h3>
+<p class="text-gray-600 text-lg mb-6">
+Driving legislation to establish localized vocational and tech training centers to combat youth unemployment through structured private sector models.
+</p>
+</div>
+<div class="flex justify-between items-end border-t border-gray-100 pt-6">
+<span class="font-bold tracking-widest text-sm text-gray-400">PILLAR III</span>
+<div class="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center">
+<i class="fa-solid fa-laptop-code text-gray-400 text-xl"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+​<!-- PAGE 4: EXPERIENCE RECORD PAGE -->
+<div id="page-experience" class="page-view py-16 px-4 md:px-8 bg-apc-dark text-white relative overflow-hidden">
+<div class="container mx-auto max-w-7xl relative z-10">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-5/12 w-full max-w-md mx-auto lg:max-w-none">
+<div class="rounded-3xl overflow-hidden shadow-2xl relative border border-white/10 group">
+<img src="4418043.jpg" alt="Hon. Babatunde Ogunlade in office" class="w-full h-auto object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8">
+<div class="w-12 h-1 bg-apc-gold mb-4"></div>
+<p class="text-xs font-bold text-apc-gold tracking-widest uppercase mb-1">Enterprise Record</p>
+<p class="font-black text-2xl font-serif text-white">Tested Administrator</p>
+</div>
+</div>
+</div>
+​<div class="lg:w-7/12 w-full">
+<div class="flex items-center gap-3 mb-6">
+<div class="h-[2px] w-12 bg-green-400"></div>
+<span class="eyebrow text-green-400">Private Sector Success</span>
+</div>
+​<h2 class="serif-heading text-4xl md:text-5xl font-black mb-8 leading-[1.1]">
+Experience that understands our people.
+</h2>
+​<div class="space-y-6 text-gray-300 text-lg leading-relaxed mb-10 font-light">
+<p>
+Before entering public service, Hon. Babatunde Ogunlade built a solid reputation in business administration. His leadership at Skylark demonstrates a proven ability to manage complex projects, allocate resources efficiently, and execute sustainable long-term strategies.
+</p>
+<p>
+These are the exact managerial competencies required in the Oyo State House of Assembly to ensure optimal constituency representation and tangible dividends of democracy.
+</p>
+</div>
+​<div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-10">
+<div>
+<div class="text-4xl font-black text-white mb-2 font-serif">15+</div>
+<div class="text-sm text-gray-400 font-bold uppercase tracking-wider">Years Experience</div>
+</div>
+<div>
+<div class="text-4xl font-black text-white mb-2 font-serif">100%</div>
+<div class="text-sm text-gray-400 font-bold uppercase tracking-wider">Commitment</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+​<!-- PAGE 5: MEDIA CENTER PAGE -->
+<div id="page-media" class="page-view py-16 px-4 md:px-8 container mx-auto max-w-7xl">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="h-[2px] w-12 bg-apc-main"></div>
+<span class="eyebrow text-apc-main">Media Center</span>
+</div>
+<h2 class="serif-heading text-4xl font-black text-gray-900">Campaign Visuals & Posters</h2>
+</div>
+<p class="text-gray-500 max-w-md md:text-right font-medium">Download and share official campaign graphics across your networks.</p>
+</div>
+​<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+<div class="rounded-3xl overflow-hidden shadow-xl img-hover-zoom border border-gray-200 relative bg-gray-100">
+<img src="876469f9-88b6-40e4-87c3-96419a4af639-1_all_5819.jpg" alt="Campaign Poster 1" class="w-full h-auto">
+</div>
+<div class="rounded-3xl overflow-hidden shadow-xl img-hover-zoom border border-gray-200 relative bg-gray-100">
+<img src="876469f9-88b6-40e4-87c3-96419a4af639-1_all_7162.jpg" alt="Campaign Poster 2" class="w-full h-auto">
+</div>
+</div>
+</div>
+​<!-- PAGE 6: CONTACT & VOLUNTEER PAGE -->
+<div id="page-contact" class="page-view py-16 px-4 md:px-8 container mx-auto max-w-4xl">
+<div class="bg-[#031c12] text-white p-8 sm:p-12 rounded-3xl shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-80 h-80 bg-apc-main rounded-full blur-[80px] opacity-40 pointer-events-none"></div>
+<div class="relative z-10">
+<span class="eyebrow text-apc-gold mb-2 block">Get Involved</span>
+<h2 class="serif-heading text-3xl sm:text-4xl font-bold mb-4">Join the Volunteer Corps</h2>
+<p class="text-gray-300 mb-8 text-lg">Sign up to receive campaign updates, event schedules, and discover ways to support the movement in your ward.</p>
+​<form onsubmit="handleFormSubmit(event)" class="space-y-5">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<input type="text" placeholder="Full Name" required class="w-full bg-black/30 border border-white/20 rounded-xl py-4 px-5 text-white placeholder-gray-400 focus:outline-none focus:border-apc-gold">
+<input type="text" placeholder="Ward / Location (e.g. Eruwa Ward 1)" required class="w-full bg-black/30 border border-white/20 rounded-xl py-4 px-5 text-white placeholder-gray-400 focus:outline-none focus:border-apc-gold">
+</div>
+<div class="relative">
+<input type="email" placeholder="Email Address" required class="w-full bg-black/30 border border-white/20 rounded-xl py-4 px-5 text-white placeholder-gray-400 focus:outline-none focus:border-apc-gold">
+</div>
+<button type="submit" class="w-full bg-apc-gold text-black font-black rounded-xl py-4 px-8 hover:bg-white transition-colors flex items-center justify-center gap-2 shadow-lg">
+Register as Volunteer <i class="fa-solid fa-arrow-right"></i>
+</button>
+</form>
+<div id="success-msg" class="hidden mt-4 p-4 bg-green-900/80 border border-green-500 rounded-xl text-green-200 text-center font-medium">
+Thank you for joining! We will contact you shortly with ward coordination details.
+</div>
+</div>
+</div>
+</div>
+​<!-- Footer Section -->
+<footer class="bg-[#031c12] text-white pt-20 pb-10 border-t-[12px] border-apc-main relative overflow-hidden mt-20">
+<div class="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
+<div class="flex flex-col lg:flex-row justify-between gap-16 mb-16 border-b border-white/10 pb-16">
+<div class="lg:w-2/5">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 bg-white text-apc-dark rounded-full flex items-center justify-center font-serif font-black text-3xl">
+BS
+</div>
+<div>
+<div class="text-xs text-apc-gold font-bold uppercase tracking-widest mb-1">HONORABLE</div>
+<h2 class="text-2xl font-black leading-tight">Babatunde Ogunlade</h2>
+<p class="text-sm text-gray-400 mt-1">APC Candidate, Ibarapa East</p>
+</div>
+</div>
+<p class="text-gray-400 leading-relaxed mb-8 text-lg">
+A campaign built on proven competence, unquestionable integrity, and a clear vision for verifiable progress in the Oyo State House of Assembly.
+</p>
+<div class="flex gap-4">
+<a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-apc-dark transition-all text-xl" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-apc-dark transition-all text-xl" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-apc-dark transition-all text-xl" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</div>
+​<!-- Footer Navigation Blocks -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8 lg:w-1/2">
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-apc-gold">Navigation</h4>
+<ul class="space-y-4 text-gray-400 font-medium text-sm">
+<li><button onclick="switchPage('home')" class="hover:text-white transition-colors">Home</button></li>
+<li><button onclick="switchPage('about')" class="hover:text-white transition-colors">About BSO</button></li>
+<li><button onclick="switchPage('agenda')" class="hover:text-white transition-colors">Legislative Agenda</button></li>
+<li><button onclick="switchPage('experience')" class="hover:text-white transition-colors">Experience Record</button></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-apc-gold">Resources</h4>
+<ul class="space-y-4 text-gray-400 font-medium text-sm">
+<li><button onclick="switchPage('media')" class="hover:text-white transition-colors">Media Gallery</button></li>
+<li><button onclick="switchPage('contact')" class="hover:text-white transition-colors">Volunteer Hub</button></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-apc-gold">Secretariat</h4>
+<p class="text-gray-400 text-sm leading-relaxed">
+BSO Campaign Secretariat,
+Ibarapa East State Constituency,
+Oyo State, Nigeria.
+</p>
+</div>
+</div>
+</div>
+​<div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 border-t border-white/10 pt-8">
+<p>© <script>document.write(new Date().getFullYear())</script> Babatunde Sunday Ogunlade Campaign. All rights reserved.</p>
+<div class="mt-4 md:mt-0 flex items-center gap-4">
+<span class="flex items-center gap-2">Platform: <span class="text-white font-black bg-apc-main border border-white/20 px-3 py-1 rounded text-xs tracking-widest">APC</span></span>
+</div>
+</div>
+</div>
+</footer>
+​<script>
+// --- Single-Page Application Multi-Page Router ---
+function switchPage(pageId) {
+// Hide all views
+document.querySelectorAll('.page-view').forEach(view => {
+view.classList.remove('active');
+});
+​// Show target view
+const target = document.getElementById('page-' + pageId);
+if (target) {
+target.classList.add('active');
+}
+​// Update active desktop nav states
+document.querySelectorAll('.nav-link').forEach(link => {
+if (link.getAttribute('data-page') === pageId) {
+link.classList.add('text-apc-main', 'font-bold');
+} else {
+link.classList.remove('text-apc-main', 'font-bold');
+}
+});
+​// Scroll to top smoothly
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+​// --- Mobile Menu Toggle Logic ---
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const bar1 = document.getElementById('bar1');
+const bar2 = document.getElementById('bar2');
+const bar3 = document.getElementById('bar3');
+​let isMenuOpen = false;
+​function toggleMenu() {
+isMenuOpen = !isMenuOpen;
+if (isMenuOpen) {
+mobileMenu.classList.remove('hidden');
+setTimeout(() => mobileMenu.classList.add('open'), 10);
+bar1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+bar2.style.opacity = '0';
+bar3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+document.body.style.overflow = 'hidden';
+} else {
+mobileMenu.classList.remove('open');
+setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+bar1.style.transform = 'none';
+bar2.style.opacity = '1';
+bar3.style.transform = 'none';
+document.body.style.overflow = '';
+}
+}
+​menuToggle.addEventListener('click', toggleMenu);
+​mobileMenu.addEventListener('click', (e) => {
+if (e.target === mobileMenu) toggleMenu();
+});
+​function handleFormSubmit(e) {
+e.preventDefault();
+document.getElementById('success-msg').classList.remove('hidden');
+e.target.reset();
+}
+</script>
+​</body>
+</html>>
+</div>
+</div>
+</div>
+</footer>
+​<script>
+// --- Single-Page Application Multi-Page Router ---
+function switchPage(pageId) {
+// Hide all views
+document.querySelectorAll('.page-view').forEach(view => {
+view.classList.remove('active');
+});
+​// Show target view
+const target = document.getElementById('page-' + pageId);
+if (target) {
+target.classList.add('active');
+}
+​// Update active desktop nav states
+document.querySelectorAll('.nav-link').forEach(link => {
+if (link.getAttribute('data-page') === pageId) {
+link.classList.add('text-apc-main', 'font-bold');
+} else {
+link.classList.remove('text-apc-main', 'font-bold');
+}
+});
+​// Scroll to top smoothly
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+​// --- Mobile Menu Toggle Logic ---
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const bar1 = document.getElementById('bar1');
+const bar2 = document.getElementById('bar2');
+const bar3 = document.getElementById('bar3');
+​let isMenuOpen = false;
+​function toggleMenu() {
+isMenuOpen = !isMenuOpen;
+if (isMenuOpen) {
+mobileMenu.classList.remove('hidden');
+setTimeout(() => mobileMenu.classList.add('open'), 10);
+bar1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+bar2.style.opacity = '0';
+bar3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+document.body.style.overflow = 'hidden';
+} else {
+mobileMenu.classList.remove('open');
+setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+bar1.style.transform = 'none';
+bar2.style.opacity = '1';
+bar3.style.transform = 'none';
+document.body.style.overflow = '';
+}
+}
+​menuToggle.addEventListener('click', toggleMenu);
+​mobileMenu.addEventListener('click', (e) => {
+if (e.target === mobileMenu) toggleMenu();
+});
+​function handleFormSubmit(e) {
+e.preventDefault();
+document.getElementById('success-msg').classList.remove('hidden');
+e.target.reset();
+}
+</script>
+​</body>
+</html>
